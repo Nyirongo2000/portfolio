@@ -1,7 +1,6 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
-// import AcmeLogo from "@/app/ui/acme-l// Assuming you have a logo component
 import NavLinks from "@/app/components/ui/shared/nav-links";
 
 export default function TopNav() {
@@ -12,7 +11,7 @@ export default function TopNav() {
   };
 
   return (
-    <nav className="bg-white shadow-md">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-white shadow-md">
       <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
         <div className="flex h-16 justify-between items-center">
           {/* Logo */}
@@ -42,7 +41,7 @@ export default function TopNav() {
                   <path
                     strokeLinecap="round"
                     strokeLinejoin="round"
-                    d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                    d="M6 18L18 6M6 6l12 12"
                   />
                 </svg>
               ) : (
@@ -66,7 +65,7 @@ export default function TopNav() {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden">
+        <div className="md:hidden bg-white shadow-md">
           <NavLinks />
         </div>
       )}
