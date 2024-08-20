@@ -1,10 +1,14 @@
 import Image from "next/image";
-import Landing from "./components/ui/shared/landing";
+import Landing from "./components/ui/Landing/landing";
+import OurServices from "./components/ui/OurServices/ourservices";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-     <Landing/> 
-    </main>
+    <>
+      <div className="flex min-h-screen flex-col items-center mb-0 justify-between p-24">
+        <Landing />
+      </div>
+      <OurServices />
+    </>
   );
 }
