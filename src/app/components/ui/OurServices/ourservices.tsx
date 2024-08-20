@@ -27,7 +27,14 @@ export default function OurServices() {
               alt="Description of image"
               width={400}
               height={300}
-              className="object-cover mt-4"
+              className="object-cover hidden md:block mt-4"
+            />
+            <Image
+              src="/resources/cyborgm.png"
+              alt="Description of image"
+              width={400}
+              height={300}
+              className="object-cover block md:hidden mt-4"
             />
           </div>
         </div>
