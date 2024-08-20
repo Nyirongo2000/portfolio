@@ -2,9 +2,9 @@ import Image from "next/image";
 
 export default function OurServices() {
   return (
-    <main className=" bg-slate-100">
+    <main className="bg-slate-100">
       {/* Section Header */}
-      <div className="flex flex-col justify-start0 mt-[-16rem] p-6">
+      <div className="flex flex-col justify-start mt-[-16rem] p-6">
         <h6>Our Services</h6>
         <h1 className="text-5xl">What Do We Do?</h1>
       </div>
@@ -48,7 +48,7 @@ export default function OurServices() {
               alt="Tech Image 1"
               width={150}
               height={150}
-              className="mb-4"
+              className="mb-4 md:opacity-50 md:hover:opacity-100 transition-opacity duration-300"
             />
             <p>Service One</p>
           </div>
@@ -60,7 +60,7 @@ export default function OurServices() {
               alt="Tech Image 2"
               width={150}
               height={150}
-              className="mb-4"
+              className="mb-4 md:opacity-50 md:hover:opacity-100 transition-opacity duration-300"
             />
             <p>Service Two</p>
           </div>
@@ -72,7 +72,7 @@ export default function OurServices() {
               alt="Tech Image 3"
               width={150}
               height={150}
-              className="mb-4"
+              className="mb-4 md:opacity-50 md:hover:opacity-100 transition-opacity duration-300"
             />
             <p>Service Three</p>
           </div>
@@ -84,7 +84,7 @@ export default function OurServices() {
               alt="Tech Image 4"
               width={150}
               height={150}
-              className="mb-4"
+              className="mb-4 md:opacity-50 md:hover:opacity-100 transition-opacity duration-300"
             />
             <p>Service Four</p>
           </div>

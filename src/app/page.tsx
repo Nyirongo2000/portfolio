@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Landing from "./components/ui/Landing/landing";
 import OurServices from "./components/ui/OurServices/ourservices";
+import Webdev from "./components/ui/webdev/webdev";
 
 export default function Home() {
   return (
@@ -9,6 +10,7 @@ export default function Home() {
         <Landing />
       </div>
       <OurServices />
+      <Webdev/>
     </>
   );
 }
