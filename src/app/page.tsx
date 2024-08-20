@@ -1,7 +1,9 @@
 import Image from "next/image";
 import Landing from "./components/ui/Landing/landing";
 import OurServices from "./components/ui/OurServices/ourservices";
-import Webdev from "./components/ui/webdev/webdev";
+import Webdev from "./components/ui/websections/webdev";
+import Appdev from "./components/ui/websections/appdev";
+import Design from "./components/ui/websections/design";
 
 export default function Home() {
   return (
@@ -10,7 +12,11 @@ export default function Home() {
         <Landing />
       </div>
       <OurServices />
-      <Webdev/>
+      <Webdev />
+      <hr className="m-10" />
+      <Appdev />
+      <hr className="m-10" />
+      <Design />
     </>
   );
 }

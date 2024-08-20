@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Card from "../shared/card";
 
 export default function OurServices() {
   return (
@@ -41,53 +42,30 @@ export default function OurServices() {
 
         {/* Cards Section */}
         <div className="flex flex-wrap justify-center items-start md:ml-10">
-          {/* Card 1 */}
-          <div className="flex flex-col items-center bg-white p-4 m-4 rounded-lg shadow-md w-full md:w-[45%]">
-            <Image
-              src="/resources/self.png"
-              alt="Tech Image 1"
-              width={150}
-              height={150}
-              className="mb-4 md:opacity-50 md:hover:opacity-100 transition-opacity duration-300"
-            />
-            <p>Service One</p>
-          </div>
-
-          {/* Card 2 */}
-          <div className="flex flex-col items-center bg-white p-4 m-4 rounded-lg shadow-md w-full md:w-[45%]">
-            <Image
-              src="/resources/self.png"
-              alt="Tech Image 2"
-              width={150}
-              height={150}
-              className="mb-4 md:opacity-50 md:hover:opacity-100 transition-opacity duration-300"
-            />
-            <p>Service Two</p>
-          </div>
-
-          {/* Card 3 */}
-          <div className="flex flex-col items-center bg-white p-4 m-4 rounded-lg shadow-md w-full md:w-[45%]">
-            <Image
-              src="/resources/self.png"
-              alt="Tech Image 3"
-              width={150}
-              height={150}
-              className="mb-4 md:opacity-50 md:hover:opacity-100 transition-opacity duration-300"
-            />
-            <p>Service Three</p>
-          </div>
-
-          {/* Card 4 */}
-          <div className="flex flex-col items-center bg-white p-4 m-4 rounded-lg shadow-md w-full md:w-[45%]">
-            <Image
-              src="/resources/self.png"
-              alt="Tech Image 4"
-              width={150}
-              height={150}
-              className="mb-4 md:opacity-50 md:hover:opacity-100 transition-opacity duration-300"
-            />
-            <p>Service Four</p>
-          </div>
+          <Card
+            href="https://link-to-project-one.com"
+            imageSrc="/resources/self.png"
+            imageAlt="Tech Image 1"
+            description="Service One"
+          />
+          <Card
+            href="https://link-to-project-two.com"
+            imageSrc="/resources/self.png"
+            imageAlt="Tech Image 2"
+            description="Service Two"
+          />
+          <Card
+            href="https://link-to-project-three.com"
+            imageSrc="/resources/self.png"
+            imageAlt="Tech Image 3"
+            description="Service Three"
+          />
+          <Card
+            href="https://link-to-project-four.com"
+            imageSrc="/resources/self.png"
+            imageAlt="Tech Image 4"
+            description="Service Four"
+          />
         </div>
       </div>
     </main>
