@@ -4,6 +4,7 @@ import OurServices from "./components/ui/OurServices/ourservices";
 import Webdev from "./components/ui/websections/webdev";
 import Appdev from "./components/ui/websections/appdev";
 import Design from "./components/ui/websections/design";
+import Contactus from "./components/ui/websections/contactus";
 
 export default function Home() {
   return (
@@ -17,6 +18,8 @@ export default function Home() {
       <Appdev />
       <hr className="m-10" />
       <Design />
+      <hr className="m-10" />
+      <Contactus />
     </>
   );
 }
