@@ -4,13 +4,12 @@ import Link from "next/link";
 
 export default function Landing() {
   return (
-    <main className="flex min-h-screen flex-col md:flex-row justify-between p-4 md:p-10">
+    <main className="flex min-h-screen flex-col md:flex-row justify-between p-4 md:p-10 ">
       <div className="flex flex-col mt-4 w-ful md:w-1/2">
         <div className="mt-[2rem] md:mt-[4rem]">
           <p className="text-lg md:text-xl lg:text-2xl">
             Where Design Meets Development: <br />
-            Explore My Creative & 
-            Technical <br/> Masterpieces
+            Explore My Creative & Technical <br /> Masterpieces
           </p>
         </div>
 

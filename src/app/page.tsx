@@ -20,6 +20,7 @@ export default function Home() {
       <Design />
       <hr className="m-10" />
       <Contactus />
+      <hr className="m-10" />
     </>
   );
 }

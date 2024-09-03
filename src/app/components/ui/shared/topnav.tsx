@@ -11,7 +11,8 @@ export default function TopNav() {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-white shadow-md">
+    // <nav className="fixed top-0 left-0 right-0 z-50 bg-white shadow-md">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-white shadow-sm">
       <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
         <div className="flex h-16 justify-between items-center">
           {/* Logo */}

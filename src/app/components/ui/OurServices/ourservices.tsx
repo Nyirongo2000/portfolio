@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Card from "../shared/card";
+import Link from "next/link";
 
 export default function OurServices() {
   return (
@@ -22,6 +23,22 @@ export default function OurServices() {
             <br />
             voluptas qui temporibus.
           </p>
+          <div>
+            <div className="flex flex-col md:flex-row  mt-4 space-y-4 md:space-y-0 md:space-x-4">
+              <Link
+                href="/pages/CodePortfolio"
+                className="flex items-center gap-5 justify-center md:justify-start rounded-lg bg-slate-900 px-3 py-3 text-sm font-medium text-white transition-colors hover:bg-slate-700 md:text-base"
+              >
+                <span>Code Portfolio</span>
+              </Link>
+              <Link
+                href="/pages/DesignPortfolio"
+                className="flex items-center gap-7 justify-center md:justify-start rounded-lg bg-slate-900 px-4 py-3 text-sm font-medium text-white transition-colors hover:bg-slate-700 md:text-base"
+              >
+                <span>Design Portfolio</span>
+              </Link>
+            </div>
+          </div>
           <div>
             <Image
               src="/resources/cyborg.png"
