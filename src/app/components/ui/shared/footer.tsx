@@ -1,7 +1,7 @@
 import Image from "next/image";
 import NavLinks from "./nav-links";
 import Link from "next/link";
-import { FaFacebook, FaInstagram,FaGithub } from "react-icons/fa";
+import { FaFacebook, FaInstagram, FaGithub } from "react-icons/fa";
 
 export default function Footer() {
   return (
@@ -12,7 +12,7 @@ export default function Footer() {
           <hr className="border-t-2 mb-4 mt-1 border-orange-700" />
 
           <Link
-            href="/pages"
+            href="/"
             className="flex w-full text-sm font-medium hover:text-blue-600 md:text-base"
           >
             <p>Home</p>
@@ -30,13 +30,13 @@ export default function Footer() {
             <p>Design Portfolio</p>
           </Link>
           <Link
-            href="/pages/contact"
+            href="/pages/Contact"
             className="flex w-full text-sm font-medium hover:text-blue-600 md:text-base"
           >
             <p>Contact</p>
           </Link>
           <Link
-            href="/pages/resume"
+            href="/pages/Resume"
             className="flex w-full text-sm font-medium hover:text-blue-600 md:text-base"
           >
             <p>Resume</p>
@@ -61,7 +61,7 @@ export default function Footer() {
               <FaInstagram className="text-2xl text-pink-600 hover:text-pink-800" />
             </Link>
             <Link
-              href="https://github"
+              href="https://github.com/Nyirongo2000"
               target="_blank"
               rel="noopener noreferrer"
             >
