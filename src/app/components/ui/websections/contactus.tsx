@@ -1,4 +1,6 @@
 import Image from "next/image";
+import Link from "next/link";
+import { FaFacebook, FaInstagram, FaGithub,FaWhatsapp } from "react-icons/fa";
 
 export default function Contactus() {
   return (
@@ -15,7 +17,7 @@ export default function Contactus() {
           <form
             action="/submit-form"
             method="post"
-            className="p-6 w-full max-w-md bg-white shadow-lg rounded-md md:w-90 md:mx-auto"
+            className="p-6 w-full h-fit max-w-md bg-white shadow-lg rounded-md md:w-90 md:mx-auto"
           >
             <div className="mb-4">
               <label
@@ -81,13 +83,25 @@ export default function Contactus() {
               ></textarea>
             </div>
 
-            <div className="flex justify-center">
+            <div className="flex flex-col justify-center gap-4">
               <button
                 type="submit"
                 className="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
               >
                 Submit
               </button>
+
+              <hr />
+              <p className="text-center"> or</p>
+              <Link
+                className="bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2"
+                href={""}
+              >
+                <div className="flex flex-row justify-between gap-1">
+                  <p className="">Get in Touch</p>
+                  <FaWhatsapp className="text-2xl text-white hover:text-white" />
+                </div>
+              </Link>
             </div>
           </form>
         </div>
