@@ -15,7 +15,7 @@ export default function Card({
   description,
 }: CardProps) {
   return (
-    <div className="flex flex-col items-center bg-white p-[1px] m-4 rounded-lg shadow-md w-full md:w-[30%]">
+    <div className="flex flex-col items-center bg-white p-2 m-4 rounded-lg w-[60%] md:w-[25%] lg:w-[20%]">
       <Link
         href={href}
         className="w-full h-full flex justify-center items-center"
@@ -23,9 +23,10 @@ export default function Card({
         <Image
           src={imageSrc}
           alt={imageAlt}
-          width={100}
-          height={100}
-          className="w-full h-full object-cover mb-4 md:opacity-50 md:hover:opacity-100 transition-opacity duration-300"
+          layout="responsive" // Keeps the image responsive within the container
+          width={1} // Adjusted to maintain aspect ratio
+          height={1} // Adjusted to maintain aspect ratio
+          className="mb-4 w-full md:opacity-50 md:hover:opacity-100 transition-opacity duration-300"
         />
       </Link>
       <p className="text-center">{description}</p>

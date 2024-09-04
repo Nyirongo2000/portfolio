@@ -16,7 +16,7 @@ export default function Webdev() {
         {/* Card 1 */}
         <Card
           href="https://link-to-project-one.com"
-          imageSrc="/resources/self.png"
+          imageSrc="/resources/hostel.jpg"
           imageAlt="Tech Image 1"
           description="Service One"
         />

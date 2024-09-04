@@ -12,9 +12,9 @@ export default function OurServices() {
       </div>
 
       {/* Introduction and Cards Section */}
-      <div className="flex flex-col md:flex-row justify-center p-6">
+      <div className="flex flex-col md:flex-row justify-between p-6 max-w-6xl mx-auto">
         {/* Introduction and Image */}
-        <div className="flex-1 flex flex-col mb-10 md:mb-0">
+        <div className="flex-1 flex w-full md:w-[48%] flex-col mb-10 md:mb-0">
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo <br />
             culpa adipisci omnis a vero, quisquam nam. Quo id doloremque
@@ -24,7 +24,7 @@ export default function OurServices() {
             voluptas qui temporibus.
           </p>
           <div>
-            <div className="flex flex-col md:flex-row  mt-4 space-y-4 md:space-y-0 md:space-x-4">
+            <div className="flex flex-col md:flex-row mt-4 space-y-4 md:space-y-0 md:space-x-4">
               <Link
                 href="/pages/CodePortfolio"
                 className="flex items-center gap-5 justify-center md:justify-start rounded-lg bg-slate-900 px-3 py-3 text-sm font-medium text-white transition-colors hover:bg-slate-700 md:text-base"
@@ -58,31 +58,35 @@ export default function OurServices() {
         </div>
 
         {/* Cards Section */}
-        <div className="flex flex-wrap justify-center items-start md:ml-10">
-          <Card
-            href="https://link-to-project-one.com"
-            imageSrc="/resources/web.jpg"
-            imageAlt="Tech Image 1"
-            description="Website development"
-          />
-          <Card
-            href="https://link-to-project-two.com"
-            imageSrc="/resources/self.png"
-            imageAlt="Tech Image 2"
-            description="Mobile App dev"
-          />
-          <Card
-            href="https://link-to-project-three.com"
-            imageSrc="/resources/self.png"
-            imageAlt="Tech Image 3"
-            description="API dev & Intergration"
-          />
-          <Card
-            href="https://link-to-project-four.com"
-            imageSrc="/resources/self.png"
-            imageAlt="Tech Image 4"
-            description="Creative Graphic Design"
-          />
+        <div className="flex-1 md:w-[48%] flex flex-col ">
+          <div className="flex justify-center">
+            <Card
+              href="https://link-to-project-one.com"
+              imageSrc="/resources/web.jpg"
+              imageAlt="Tech Image 1"
+              description="Website development"
+            />
+            <Card
+              href="https://link-to-project-two.com"
+              imageSrc="/resources/mobile.jpg"
+              imageAlt="Tech Image 2"
+              description="Mobile App dev"
+            />
+          </div>
+          <div className="flex justify-center">
+            <Card
+              href="https://link-to-project-three.com"
+              imageSrc="/resources/api.jpg"
+              imageAlt="Tech Image 3"
+              description="API dev & Integration"
+            />
+            <Card
+              href="https://link-to-project-four.com"
+              imageSrc="/resources/design.jpg"
+              imageAlt="Tech Image 4"
+              description="Creative Graphic Design"
+            />
+          </div>
         </div>
       </div>
     </main>
