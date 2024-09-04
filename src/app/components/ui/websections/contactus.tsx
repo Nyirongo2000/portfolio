@@ -95,10 +95,10 @@ export default function Contactus() {
         {/* Image */}
         <div className="">
           <Image
-            src="/resources/cyborg.png"
+            src="/resources/happy1.png"
             alt="Description of image"
-            width={400}
-            height={300}
+            width={600}
+            height={400}
             className="object-cover hidden md:block mt-4"
           />
         </div>

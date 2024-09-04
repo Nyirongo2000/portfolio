@@ -61,27 +61,27 @@ export default function OurServices() {
         <div className="flex flex-wrap justify-center items-start md:ml-10">
           <Card
             href="https://link-to-project-one.com"
-            imageSrc="/resources/self.png"
+            imageSrc="/resources/web.jpg"
             imageAlt="Tech Image 1"
-            description="Service One"
+            description="Website development"
           />
           <Card
             href="https://link-to-project-two.com"
             imageSrc="/resources/self.png"
             imageAlt="Tech Image 2"
-            description="Service Two"
+            description="Mobile App dev"
           />
           <Card
             href="https://link-to-project-three.com"
             imageSrc="/resources/self.png"
             imageAlt="Tech Image 3"
-            description="Service Three"
+            description="API dev & Intergration"
           />
           <Card
             href="https://link-to-project-four.com"
             imageSrc="/resources/self.png"
             imageAlt="Tech Image 4"
-            description="Service Four"
+            description="Creative Graphic Design"
           />
         </div>
       </div>
