@@ -15,26 +15,27 @@ export default function Design() {
       <div className="flex flex-wrap justify-center items-start md:ml-10">
         {/* Card 1 */}
         <Card
-          href="https://link-to-project-one.com"
-          imageSrc="/resources/self.png"
+        // replace with whatsap catalog link
+          href="#"
+          imageSrc="/resources/poster.jpg"
           imageAlt="Tech Image 1"
-          description="Service One"
+          description="ad posters"
         />
 
         {/* Card 2 */}
         <Card
-          href="https://link-to-project-one.com"
-          imageSrc="/resources/self.png"
+          href="#"
+          imageSrc="/resources/product.jpg"
           imageAlt="Tech Image 1"
-          description="Service One"
+          description="package design"
         />
 
         {/* Card 3 */}
         <Card
-          href="https://link-to-project-one.com"
-          imageSrc="/resources/self.png"
+          href="#"
+          imageSrc="/resources/branding.jpg"
           imageAlt="Tech Image 1"
-          description="Service One"
+          description="logo and branding"
         />
       </div>
 
