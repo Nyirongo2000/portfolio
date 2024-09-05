@@ -16,25 +16,25 @@ export default function Appdev() {
         {/* Card 1 */}
         <Card
           href="https://link-to-project-one.com"
-          imageSrc="/resources/self.png"
+          imageSrc="/resources/chatapp.png"
           imageAlt="Tech Image 1"
-          description="Service One"
+          description="secure inhouse company chat app"
         />
 
         {/* Card 2 */}
         <Card
           href="https://link-to-project-one.com"
-          imageSrc="/resources/self.png"
+          imageSrc="/resources/habit.jpg"
           imageAlt="Tech Image 1"
-          description="Service One"
+          description="habit tracker app"
         />
 
         {/* Card 3 */}
         <Card
           href="https://link-to-project-one.com"
-          imageSrc="/resources/self.png"
+          imageSrc="/resources/colors.png"
           imageAlt="Tech Image 1"
-          description="Service One"
+          description="my colors"
         />
       </div>
 

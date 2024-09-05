@@ -15,26 +15,26 @@ export default function Webdev() {
       <div className="flex flex-wrap justify-center items-start md:ml-10">
         {/* Card 1 */}
         <Card
-          href="https://link-to-project-one.com"
+          href="https://chikanda-landlord.vercel.app/"
           imageSrc="/resources/hostel.jpg"
           imageAlt="Tech Image 1"
-          description="Service One"
+          description="Hostel Booking System"
         />
 
         {/* Card 2 */}
         <Card
           href="https://link-to-project-one.com"
-          imageSrc="/resources/self.png"
+          imageSrc="/resources/customer1.jpg"
           imageAlt="Tech Image 1"
-          description="Service One"
+          description="Customer Management System"
         />
 
         {/* Card 3 */}
         <Card
           href="https://link-to-project-one.com"
-          imageSrc="/resources/self.png"
+          imageSrc="/resources/payslip2.jpg"
           imageAlt="Tech Image 1"
-          description="Service One"
+          description="blockchain payslip automation"
         />
       </div>
 
@@ -47,7 +47,6 @@ export default function Webdev() {
           <p className="">More Web Projects</p>
         </Link>
       </div>
-      
     </>
   );
 }

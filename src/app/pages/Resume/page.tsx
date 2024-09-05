@@ -56,13 +56,13 @@ export default function Resume() {
             <br />
             Bachelor of Science in Computer Science
           </li>
-          <li>
+          {/* <li>
             <strong>
               National College of Information Technology - NACIT (2019)
             </strong>
             <br />
             NCC Education Level 4 Diploma
-          </li>
+          </li> */}
         </ul>
       </section>
 
