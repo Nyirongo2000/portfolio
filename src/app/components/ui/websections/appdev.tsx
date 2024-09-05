@@ -15,7 +15,7 @@ export default function Appdev() {
       <div className="flex flex-wrap justify-center items-start md:ml-10">
         {/* Card 1 */}
         <Card
-          href="https://link-to-project-one.com"
+          href="https://appetize.io/app/warrd6g4epyzlns5trv7ocaoiq"
           imageSrc="/resources/chatapp.png"
           imageAlt="Tech Image 1"
           description="secure inhouse company chat app"
