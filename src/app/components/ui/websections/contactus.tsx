@@ -95,7 +95,7 @@ export default function Contactus() {
               <p className="text-center"> or</p>
               <Link
                 className="bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2"
-                href={""}
+                href={"https://wa.me/265882748301?text=hello"}
               >
                 <div className="flex flex-row justify-between gap-1">
                   <p className="">Get in Touch</p>
