@@ -30,7 +30,7 @@ export default function Landing() {
 
         <div className="mt-2 justify-center">
           <Link
-            href="/pages/CodePortfolio"
+            href="Contactus"
             className="flex w-6/12 justify-center rounded-lg bg-orange-700 px-3 py-3 text-sm font-medium text-white transition-colors hover:bg-orange-900 md:text-base"
           >
             <p className="">Get in Touch</p>
