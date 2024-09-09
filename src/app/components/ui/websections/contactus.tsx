@@ -12,6 +12,7 @@ export default function Contactus() {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [submitted, setSubmitted] = useState(false);
+  const [showModal, setShowModal] = useState(false); // New state for modal visibility
 
   // Handle form submission
   const handleSubmit = (e: React.FormEvent) => {
@@ -46,6 +47,9 @@ export default function Contactus() {
           setSurName("");
           setEmail("");
           setMessage("");
+
+          // Show success modal
+          setShowModal(true);
         }
       })
       .catch((err) => {
@@ -55,6 +59,25 @@ export default function Contactus() {
 
   return (
     <>
+      {/* Modal */}
+      {showModal && (
+        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
+          <div className="bg-white p-6 rounded-lg shadow-lg">
+            <h2 className="text-lg font-bold">Message Sent!</h2>
+            <p>
+              Your message has been sent successfully. We will get back to you
+              soon.
+            </p>
+            <button
+              className="mt-4 bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700"
+              onClick={() => setShowModal(false)}
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      )}
+
       {/* Section Header */}
       <div className="flex flex-col justify-start p-6">
         <h6>Do you like what you see?</h6>
