@@ -11,6 +11,9 @@ export default function Landing() {
             Where Design Meets Development: <br />
             Explore My Creative & Technical <br /> Masterpieces
           </p>
+          <p className="text-blue-600">
+            Site Under Construction: We Are Building in Real-Time
+          </p>
         </div>
 
         <div className="flex flex-col md:flex-row  mt-4 space-y-4 md:space-y-0 md:space-x-4">

@@ -16,12 +16,10 @@ export default function OurServices() {
         {/* Introduction and Image */}
         <div className="flex-1 flex w-full md:w-[48%] flex-col mb-10 md:mb-0">
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo <br />
-            culpa adipisci omnis a vero, quisquam nam. Quo id doloremque
+            We develop websites, mobile applications, APIs, and exceptional
+            graphic designs tailored to meet your business needs and drive
+            success.
             <br />
-            nesciunt est iusto deleniti fugiat consectetur, tenetur in
-            <br />
-            voluptas qui temporibus.
           </p>
           <div>
             <div className="flex flex-col md:flex-row mt-4 space-y-4 md:space-y-0 md:space-x-4">
