@@ -63,12 +63,14 @@ export default function OurServices() {
               imageSrc="/resources/web.jpg"
               imageAlt="Tech Image 1"
               description="Website development"
+              disabled={true}
             />
             <Card
               href="https://link-to-project-two.com"
               imageSrc="/resources/mobile.jpg"
               imageAlt="Tech Image 2"
               description="Mobile App dev"
+              disabled={true}
             />
           </div>
           <div className="flex justify-center">
@@ -77,12 +79,14 @@ export default function OurServices() {
               imageSrc="/resources/api.jpg"
               imageAlt="Tech Image 3"
               description="API dev & Integration"
+              disabled={true}
             />
             <Card
               href="https://link-to-project-four.com"
               imageSrc="/resources/design.jpg"
               imageAlt="Tech Image 4"
               description="Creative Graphic Design"
+              disabled={true}
             />
           </div>
         </div>

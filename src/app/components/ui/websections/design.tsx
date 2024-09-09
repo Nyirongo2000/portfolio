@@ -15,7 +15,7 @@ export default function Design() {
       <div className="flex flex-wrap justify-center items-start md:ml-10">
         {/* Card 1 */}
         <Card
-        // replace with whatsap catalog link
+          // replace with whatsap catalog link
           href="#"
           imageSrc="/resources/poster.jpg"
           imageAlt="Tech Image 1"
@@ -42,10 +42,10 @@ export default function Design() {
       {/* Link to More Projects */}
       <div className="flex justify-center items-center">
         <Link
-          href="/pages/CodePortfolio"
+          href="https://wa.me/c/265882748301"
           className="flex w-fill justify-center rounded-lg bg-orange-700 px-3 py-3 text-sm font-medium text-white transition-colors hover:bg-orange-900 md:text-base"
         >
-          <p className="">More Web Projects</p>
+          <p className="">More design Projects</p>
         </Link>
       </div>
     </>

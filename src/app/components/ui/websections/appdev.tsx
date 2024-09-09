@@ -44,7 +44,7 @@ export default function Appdev() {
           href="/pages/CodePortfolio"
           className="flex w-fill justify-center rounded-lg bg-orange-700 px-3 py-3 text-sm font-medium text-white transition-colors hover:bg-orange-900 md:text-base"
         >
-          <p className="">More Web Projects</p>
+          <p className="">More mobile app Projects</p>
         </Link>
       </div>
     </main>
