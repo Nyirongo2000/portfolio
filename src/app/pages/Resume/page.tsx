@@ -7,7 +7,9 @@ export default function Resume() {
         <h1 className="text-5xl font-extrabold tracking-wide mt-14 mb-4">
           Oliver Stevin Nyirongo
         </h1>
-        <p className="text-lg text-gray-600">Software Engineer & Creative Designer</p>
+        <p className="text-lg text-gray-600">
+          Software Engineer & Creative Designer
+        </p>
         <div className="mt-6 space-y-2">
           <p className="text-lg text-gray-600">Phone: +265882748301</p>
           <p className="text-lg text-gray-600">
@@ -179,7 +181,7 @@ export default function Resume() {
             <br />
             <span>Email:</span>{" "}
             <a
-              href="mailto:jemimahkaonga22@gmail.com"
+              href="mailto:kaongajemimah@gmail.com"
               className="text-blue-600 hover:text-blue-800"
             >
               jemimahkaonga22@gmail.com

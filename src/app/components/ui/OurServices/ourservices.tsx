@@ -63,7 +63,7 @@ export default function OurServices() {
               imageSrc="/resources/web.jpg"
               imageAlt="Tech Image 1"
               description="Website development"
-              disabled={true}
+              // disabled={true}
             />
             <Card
               href=""
