@@ -79,14 +79,14 @@ export default function OurServices() {
               imageSrc="/resources/api.jpg"
               imageAlt="Tech Image 3"
               description="API dev & Integration"
-              disabled={true}
+              // disabled={true}
             />
             <Card
               href="https://link-to-project-four.com"
               imageSrc="/resources/design.jpg"
               imageAlt="Tech Image 4"
               description="Creative Graphic Design"
-              disabled={true}
+              // disabled={true}
             />
           </div>
         </div>
