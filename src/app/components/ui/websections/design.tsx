@@ -17,7 +17,7 @@ export default function Design() {
         <Card
           // replace with whatsap catalog link
           href="#"
-          imageSrc="/resources/poster.jpg"
+          imageSrc="/resources/poster.png"
           imageAlt="Tech Image 1"
           description="ad posters"
         />
@@ -25,7 +25,7 @@ export default function Design() {
         {/* Card 2 */}
         <Card
           href="#"
-          imageSrc="/resources/product.jpg"
+          imageSrc="/resources/product.png"
           imageAlt="Tech Image 1"
           description="package design"
         />
@@ -33,7 +33,7 @@ export default function Design() {
         {/* Card 3 */}
         <Card
           href="#"
-          imageSrc="/resources/branding.jpg"
+          imageSrc="/resources/Branding.png"
           imageAlt="Tech Image 1"
           description="logo and branding"
         />

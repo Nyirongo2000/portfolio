@@ -47,7 +47,7 @@ export default function Footer() {
           <hr className="border-t-2 mb-4 mt-1 border-orange-700" />
           <div className="flex space-x-4">
             <Link
-              href="https://facebook.com"
+              href="https://www.facebook.com/profile.php?id=61566443795779&mibextid=ZbWKwL"
               target="_blank"
               rel="noopener noreferrer"
             >
