@@ -7,6 +7,7 @@ export default function Resume() {
         <h1 className="text-5xl font-extrabold tracking-wide mt-14 mb-4">
           Oliver Stevin Nyirongo
         </h1>
+
         <p className="text-lg text-gray-600">
           Software Engineer & Creative Designer
         </p>
@@ -27,6 +28,14 @@ export default function Resume() {
           </p>
         </div>
       </section>
+      <Link
+        href="../public/resources/Oliver_Nyirongo_CV_Jan_2025.docx"
+        className="w-36 rounded-lg bg-slate-900 px-4 py-3 text-sm font-medium text-white transition-colors hover:bg-slate-700 md:text-base"
+        download
+      >
+        Download CV
+      </Link>
+
       <hr className="border-t-2 border-gray-300 mx-2 md:mx-0 w-full max-w-screen-lg my-8" />
 
       <section className="mb-16 w-full max-w-screen-lg">
