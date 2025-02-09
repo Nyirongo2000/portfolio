@@ -43,7 +43,7 @@ export default function Landing() {
             <p>Get in Touch</p>
 
             {/* Animated Border */}
-            <span className="absolute inset-0 rounded-lg border-2 border-transparent before:absolute before:inset-0 before:rounded-lg before:border-2 before:border-orange-300 before:animate-[borderGlow_2s_linear_infinite]"></span>
+            <span className="absolute inset-0 rounded-lg border-2 border-transparent before:absolute before:inset-0 before:rounded-lg before:border-2 before:border-orange-300 before:animate-[borderGlow_3s_linear_infinite]"></span>
           </Link>
 
           <style>

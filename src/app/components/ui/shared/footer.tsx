@@ -54,7 +54,7 @@ export default function Footer() {
               <FaFacebook className="text-2xl text-blue-600 hover:text-blue-800" />
             </Link>
             <Link
-              href="https://instagram.com"
+              href="https://www.instagram.com/oli_ver_ny/"
               target="_blank"
               rel="noopener noreferrer"
             >
