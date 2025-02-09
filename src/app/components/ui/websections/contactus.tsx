@@ -200,7 +200,7 @@ export default function Contactus() {
             alt="Description of image"
             width={600}
             height={400}
-            className="object-cover hidden md:block mt-4"
+            className="object-cover hidden md:block mt-4 ml-11"
           />
         </div>
       </div>
