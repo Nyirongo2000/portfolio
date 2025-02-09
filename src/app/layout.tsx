@@ -9,8 +9,25 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Oliver Nyirongo",
   description:
-    "i am oliver nyirongo a software developer and a creative designer.",
-  keywords:"web developer, software developer, Malawi, startup,Oliver,Nyirongo,Tech, Technology,Payment Intergration,Flutter,Fullstack developer, website generatior,website, malawi developer,",
+    "I am Oliver Nyirongo, a software developer and a creative designer.",
+  keywords:
+    "web developer, software developer, Malawi, startup, Oliver, Nyirongo, Tech, Technology, Payment Integration, Flutter, Fullstack developer, website generator, website, Malawi developer",
+  openGraph: {
+    title: "Oliver Nyirongo - Software Developer & Designer",
+    description:
+      "I am Oliver Nyirongo, a software developer and a creative designer.",
+    url: "https://olivernyirongo.online/",
+    siteName: "Oliver Nyirongo",
+    images: [
+      {
+        url: "/icon.png", 
+        width: 1200,
+        height: 630,
+        alt: "Oliver Nyirongo Portfolio",
+      },
+    ],
+    type: "website",
+  },
 };
 
 export default function RootLayout({
@@ -23,7 +40,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <TopNav />
         {children}
-        <Footer/>
+        <Footer />
       </body>
     </html>
   );
