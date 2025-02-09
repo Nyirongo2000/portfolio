@@ -1,18 +1,38 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import NavLinks from "@/app/components/ui/shared/nav-links";
 
 export default function TopNav() {
   const [isOpen, setIsOpen] = useState(false);
+  const navRef = useRef<HTMLDivElement | null>(null); // Explicitly typing navRef
 
+  // Toggle mobile menu
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
 
+  // Close mobile menu when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (navRef.current && !navRef.current.contains(event.target as Node)) {
+        setIsOpen(false); // Close menu if clicking outside
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+
+    // Cleanup on component unmount
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
   return (
-    // <nav className="fixed top-0 left-0 right-0 z-50 bg-white shadow-md">
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-white shadow-sm">
+    <nav
+      ref={navRef}
+      className="fixed top-0 left-0 right-0 z-50 bg-white shadow-sm"
+    >
       <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
         <div className="flex h-16 justify-between items-center">
           {/* Logo */}
