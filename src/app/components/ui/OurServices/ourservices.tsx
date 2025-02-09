@@ -8,7 +8,7 @@ export default function OurServices() {
       {/* Section Header */}
       <div className="flex flex-col justify-start mt-[-16rem] p-6">
         <h6>Our Services</h6>
-        <h1 className="text-5xl">What Do We Do?</h1>
+        <h1 className="text-5xl">What Do I Do?</h1>
       </div>
 
       {/* Introduction and Cards Section */}
@@ -16,12 +16,13 @@ export default function OurServices() {
         {/* Introduction and Image */}
         <div className="flex-1 flex w-full md:w-[48%] flex-col mb-10 md:mb-0">
           <p>
-            I develop websites, mobile applications, APIs, and exceptional
-            graphic designs tailored to meet your business needs and drive
-            success.
+            I create powerful websites, mobile apps, and software solutions that
+            run smoothly on any device. With secure payment integration, robust
+            APIs, and stunning graphic designs, I craft digital experiences
+            designed to grow your business and drive success.
             <br />
           </p>
-          <div>
+          {/* <div>
             <div className="flex flex-col md:flex-row mt-4 space-y-4 md:space-y-0 md:space-x-4">
               <Link
                 href="/pages/CodePortfolio"
@@ -36,7 +37,7 @@ export default function OurServices() {
                 <span>Design Portfolio</span>
               </Link>
             </div>
-          </div>
+          </div> */}
           <div>
             <Image
               src="/resources/cyborg.png"
