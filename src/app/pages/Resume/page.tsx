@@ -28,13 +28,13 @@ export default function Resume() {
           </p>
         </div>
       </section>
-      <Link
-        href="../public/resources/Oliver_Nyirongo_CV_Jan_2025.docx"
-        className="w-36 rounded-lg bg-slate-900 px-4 py-3 text-sm font-medium text-white transition-colors hover:bg-slate-700 md:text-base"
+      <a
         download
+        href="/public/resources/Oliver_Nyirongo_CV_Feb2025.pdf"
+        className="w-36 rounded-lg bg-slate-900 px-4 py-3 text-sm font-medium text-white transition-colors hover:bg-slate-700 md:text-base"
       >
         Download CV
-      </Link>
+      </a>
 
       <hr className="border-t-2 border-gray-300 mx-2 md:mx-0 w-full max-w-screen-lg my-8" />
 

@@ -16,7 +16,7 @@ export default function OurServices() {
         {/* Introduction and Image */}
         <div className="flex-1 flex w-full md:w-[48%] flex-col mb-10 md:mb-0">
           <p>
-            We develop websites, mobile applications, APIs, and exceptional
+            I develop websites, mobile applications, APIs, and exceptional
             graphic designs tailored to meet your business needs and drive
             success.
             <br />
