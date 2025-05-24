@@ -1,52 +1,103 @@
 import Image from "next/image";
 import Link from "next/link";
-import Card from "../shared/card";
+import { FiExternalLink } from "react-icons/fi";
 
 export default function Appdev() {
+  const projects = [
+    {
+      title: "Secure Company Chat",
+      description: "Encrypted in-house communication app",
+      image: "/resources/chatapp.png",
+      link: "https://appetize.io/embed/warrd6g4epyzlns5trv7ocaoiq",
+      tags: ["Flutter", "Firebase", "End-to-End Encryption"],
+    },
+    {
+      title: "Habit Tracker",
+      description: "Personal productivity and routine builder",
+      image: "/resources/habit.jpg",
+      link: "#",
+      tags: ["React Native", "Redux", "Local Storage"],
+    },
+    {
+      title: "My Colors",
+      description: "Custom color palette generator",
+      image: "/resources/colors.png",
+      link: "#",
+      tags: ["Flutter", "Material Design", "Color Theory"],
+    },
+  ];
+
   return (
-    <main className="bg-slate-100">
-      {/* Section Header */}
-      <div className="flex flex-col justify-start p-6">
-        <h6>mobile Development</h6>
-        <h1 className="text-5xl">Recent Projects</h1>
-      </div>
+    <div className="bg-slate-100 w-full">
+      <section className="py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        {/* Header */}
+        <div className="text-center mb-12">
+          <span className="text-blue-600 font-medium block mb-2">
+            Mobile Development
+          </span>
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-900">
+            Recent Projects
+          </h1>
+          <p className="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
+            High-performance mobile applications built with modern frameworks
+          </p>
+        </div>
 
-      {/* Cards Section */}
-      <div className="flex flex-wrap justify-center items-start md:ml-10">
-        {/* Card 1 */}
-        <Card
-          href="https://appetize.io/embed/warrd6g4epyzlns5trv7ocaoiq"
-          imageSrc="/resources/chatapp.png"
-          imageAlt="Tech Image 1"
-          description="secure inhouse company chat app"
-        />
+        {/* Projects Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+          {projects.map((project, index) => (
+            <div
+              key={index}
+              className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 group"
+            >
+              <div className="relative h-64 overflow-hidden">
+                <Image
+                  src={project.image}
+                  alt={project.title}
+                  fill
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-bold text-gray-900 mb-2">
+                  {project.title}
+                </h3>
+                <p className="text-gray-600 mb-4">{project.description}</p>
 
-        {/* Card 2 */}
-        <Card
-          href="https://link-to-project-one.com"
-          imageSrc="/resources/habit.jpg"
-          imageAlt="Tech Image 1"
-          description="habit tracker app"
-        />
+                <div className="flex flex-wrap gap-2 mb-4">
+                  {/* {project.tags.map((tag, i) => (
+                    <span
+                      key={i}
+                      className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs"
+                    >
+                      {tag}
+                    </span>
+                  ))} */}
+                </div>
 
-        {/* Card 3 */}
-        <Card
-          href="https://link-to-project-one.com"
-          imageSrc="/resources/colors.png"
-          imageAlt="Tech Image 1"
-          description="my colors"
-        />
-      </div>
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium"
+                >
+                  View Project <FiExternalLink className="ml-2" />
+                </a>
+              </div>
+            </div>
+          ))}
+        </div>
 
-      {/* Link to More Projects */}
-      <div className="flex justify-center items-center">
-        <Link
-          href="/pages/CodePortfolio"
-          className="flex w-fill justify-center rounded-lg bg-orange-700 px-3 py-3 text-sm font-medium text-white transition-colors hover:bg-orange-900 md:text-base"
-        >
-          <p className="">More mobile app Projects</p>
-        </Link>
-      </div>
-    </main>
+        {/* CTA Button */}
+        <div className="text-center">
+          <Link
+            href="/pages/CodePortfolio"
+            className="inline-flex items-center justify-center px-6 py-3 bg-orange-600 hover:bg-orange-700 text-white font-medium rounded-lg shadow-md transition-all duration-300 transform hover:-translate-y-1"
+          >
+            Explore More Mobile Projects
+          </Link>
+        </div>
+      </section>
+    </div>
   );
 }
