@@ -1,23 +1,32 @@
-'use client'
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { FiExternalLink, FiGithub, FiX } from "react-icons/fi";
 
+interface Project {
+  id: number;
+  title: string;
+  description: string;
+  imageUrl: string;
+  story: string;
+  technologies: string[];
+  githubLink?: string;
+  liveLink?: string;
+}
+
 export default function CodePortfolio() {
-  const [selectedProject, setSelectedProject] = useState(null);
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const projects = [
+  const projects: Project[] = [
     {
       id: 6,
-      title: "Abundant LIfe Malawi website",
-      description: "Abundant LIfe Malawi website orgnanisational website",
+      title: "Abundant Life Malawi website",
+      description: "Organizational website for Abundant Life Center Malawi",
       imageUrl: "/resources/abundant.png",
       story:
-        "Abundant Life Center Malawi needed a website that balanced modern aesthetics with professional credibility, I delivered a complete redesign focused on visual appeal and donor engagement. Starting with a sleek Figma prototype featuring clean layouts and professional typography, I developed a responsive React frontend with subtle animations and a Node.js/Mysql backend for seamless performance. The new design maintained the organization's trusted identity while introducing contemporary elements that increased visitor engagement by 50%. The client was particularly impressed with how the site achieved both a fresh, modern look and a polished professional presence—exactly what they needed to attract more donors while maintaining their reputation. The successful integration of secure payment processing completed this transformation, resulting in immediate improvements to their online fundraising",
-      technologies: ["React", "Node.js", "Mysql", "paypal"],
-      // githubLink: "#",
+        "Abundant Life Center Malawi needed a website that balanced modern aesthetics with professional credibility. I delivered a complete redesign focused on visual appeal and donor engagement. Starting with a sleek Figma prototype featuring clean layouts and professional typography, I developed a responsive React frontend with subtle animations and a Node.js/MySQL backend for seamless performance. The new design maintained the organization's trusted identity while introducing contemporary elements that increased visitor engagement by 50%. The client was particularly impressed with how the site achieved both a fresh, modern look and a polished professional presence—exactly what they needed to attract more donors while maintaining their reputation. The successful integration of secure payment processing completed this transformation, resulting in immediate improvements to their online fundraising.",
+      technologies: ["React", "Node.js", "MySQL", "PayPal"],
       liveLink: "https://abundantlifecentermalawi.org/",
     },
     {
@@ -77,10 +86,10 @@ export default function CodePortfolio() {
     },
   ];
 
-  const openModal = (project) => {
+  const openModal = (project: Project) => {
     setSelectedProject(project);
     setIsModalOpen(true);
-    document.body.style.overflow = "hidden"; // Prevent scrolling when modal is open
+    document.body.style.overflow = "hidden";
   };
 
   const closeModal = () => {
