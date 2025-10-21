@@ -83,7 +83,7 @@ export default function Footer() {
               <FaPhone className="text-orange-400" /> +265 882 748 301
             </li>
             <li className="flex items-center gap-2">
-              <FaMapMarkerAlt className="text-orange-400" /> Zomba, Malawi
+              <FaMapMarkerAlt className="text-orange-400" /> Malawi
             </li>
           </ul>
         </div>
@@ -117,7 +117,7 @@ export default function Footer() {
             </Link>
           </div>
 
-          <form className="flex items-center border border-gray-600 rounded-lg overflow-hidden">
+          {/* <form className="flex items-center border border-gray-600 rounded-lg overflow-hidden">
             <input
               type="email"
               placeholder="Subscribe to updates"
@@ -129,7 +129,7 @@ export default function Footer() {
             >
               Subscribe
             </button>
-          </form>
+          </form> */}
         </div>
       </div>
 
