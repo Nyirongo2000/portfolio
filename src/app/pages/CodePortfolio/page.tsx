@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
@@ -18,6 +18,8 @@ interface Project {
 export default function CodePortfolio() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [visibleProjects, setVisibleProjects] = useState(9);
+  const [isLoading, setIsLoading] = useState(false);
 
   const projects: Project[] = [
     {
@@ -26,19 +28,40 @@ export default function CodePortfolio() {
       description: "Organizational website for Abundant Life Center Malawi",
       imageUrl: "/resources/abundant.png",
       story:
-        "Abundant Life Center Malawi needed a website that balanced modern aesthetics with professional credibility. I delivered a complete redesign focused on visual appeal and donor engagement. Starting with a sleek Figma prototype featuring clean layouts and professional typography, I developed a responsive React frontend with subtle animations and a Node.js/MySQL backend for seamless performance. The new design maintained the organization's trusted identity while introducing contemporary elements that increased visitor engagement by 50%. The client was particularly impressed with how the site achieved both a fresh, modern look and a polished professional presence—exactly what they needed to attract more donors while maintaining their reputation. The successful integration of secure payment processing completed this transformation, resulting in immediate improvements to their online fundraising.",
+        "Abundant Life Center Malawi needed a website that balanced modern aesthetics with professional credibility. I delivered a complete redesign focused on visual appeal and donor engagement. Starting with a sleek Figma prototype featuring clean layouts and professional typography, I developed a responsive React frontend with subtle animations and a Node.js/MySQL backend for seamless performance. The new design maintained the organization's trusted identity while introducing contemporary elements that increased visitor engagement by 50%.",
       technologies: ["React", "Node.js", "MySQL", "PayPal"],
       liveLink: "https://abundantlifecentermalawi.org/",
     },
     {
       id: 1,
+      title: "Secure Chat App",
+      description: "Encrypted Office Communication",
+      imageUrl: "/resources/chatapp.png",
+      story:
+        "Developed an end-to-end encrypted chat application for office communication with features like message recall, file sharing, and read receipts. Implemented using WebSockets for real-time updates.",
+      technologies: ["Flutter", "Firebase"],
+      githubLink: "#",
+      liveLink: "https://appetize.io/embed/warrd6g4epyzlns5trv7ocaoiq",
+    },
+    {
+      id: 8,
+      title: "Bus Booking System",
+      description:
+        "A website where users are able to buy tickets for any bus company in Malawi",
+      imageUrl: "/resources/busticket.png",
+      story:
+        "Users have the freedom to book and buy tickets for any bus, anywhere in Malawi. The system was built with a strong backend to handle schedules and payments securely.",
+      technologies: ["React", "Spring Boot", "PostgreSQL"],
+      liveLink: "https://bus-yanga.vercel.app/",
+    },
+    {
+      id: 5,
       title: "Hostel Management System",
       description: "Student Hostel Finder",
       imageUrl: "/resources/web3.png",
       story:
-        "Developed a comprehensive hostel management system that streamlined the process of finding and booking student accommodations. Implemented features like real-time availability checks, online payments, and admin dashboard. Built with React, Node.js, and MongoDB.",
+        "Developed a comprehensive hostel management system that streamlined the process of finding and booking student accommodations. Implemented real-time availability checks, payments, and an admin dashboard.",
       technologies: ["React", "Node.js", "MongoDB", "Express"],
-      // githubLink: "#",
       liveLink: "https://chikanda-landlord.vercel.app/",
     },
     {
@@ -47,10 +70,9 @@ export default function CodePortfolio() {
       description: "CRM Solution for Businesses",
       imageUrl: "/resources/crm.png",
       story:
-        "Created a custom CRM solution that helped small businesses manage customer relationships, track sales, and automate follow-ups. The system reduced manual work by 60% for our clients.",
+        "Created a custom CRM solution that helped small businesses manage customer relationships, track sales, and automate follow-ups. Reduced manual work by 60%.",
       technologies: ["Next.js", "Firebase", "Tailwind CSS"],
       githubLink: "#",
-      liveLink: "#",
     },
     {
       id: 3,
@@ -58,10 +80,19 @@ export default function CodePortfolio() {
       description: "Automated Payroll System",
       imageUrl: "/resources/payslip2.jpg",
       story:
-        "Automated the payslip generation process for an HR department, reducing processing time from 3 days to 15 minutes. Integrated with existing accounting software and included tax calculation features.",
+        "Automated the payslip generation process for an HR department, reducing processing time from 3 days to 15 minutes. Integrated with accounting software and added tax features.",
       technologies: ["Python", "Django", "PostgreSQL"],
       githubLink: "#",
-      liveLink: "#",
+    },
+    {
+      id: 7,
+      title: "Rainbowpaint V1",
+      description: "Rainbowpaint website",
+      imageUrl: "/resources/rainbowpaint.png",
+      story:
+        "Built a modern company website showcasing Rainbowpaint’s products and services. The focus was on a vibrant UI and responsiveness across devices.",
+      technologies: ["Next.js"],
+      liveLink: "https://rainbowpaints.vercel.app/",
     },
     {
       id: 4,
@@ -69,23 +100,29 @@ export default function CodePortfolio() {
       description: "Personal Productivity App",
       imageUrl: "/resources/habit.jpg",
       story:
-        "Built a habit tracking app that helps users build and maintain positive habits. Features include streak tracking, reminders, and progress visualization. The app has helped thousands of users improve their daily routines.",
+        "Built a habit tracking app that helps users build and maintain positive habits. Features include streak tracking, reminders, and progress visualization.",
       technologies: ["React Native", "Firebase", "Redux"],
       githubLink: "#",
-      liveLink: "#",
     },
     {
-      id: 5,
-      title: "Secure Chat App",
-      description: "Encrypted Office Communication",
-      imageUrl: "/resources/chatapp.png",
+      id: 9,
+      title: "RootsMagazine Payment Integration",
+      description: "Website where users can buy magazines",
+      imageUrl: "/resources/rootsfront.png",
       story:
-        "Developed an end-to-end encrypted chat application for office communication with features like message recall, file sharing, and read receipts. Implemented using WebSockets for real-time updates.",
-      technologies: ["React", "Node.js", "Socket.io", "MongoDB"],
-      githubLink: "#",
-      liveLink: "#",
+        "The client wanted a simple yet elegant magazine platform with integrated payments. I designed and developed a system that allowed users to browse and buy magazine issues online securely.",
+      technologies: ["Next.js", "Paychangu Payment Gateway"],
+      liveLink: "https://rootsmagazine.vercel.app/",
     },
   ];
+
+  const loadMoreProjects = () => {
+    setIsLoading(true);
+    setTimeout(() => {
+      setVisibleProjects((prev) => prev + 3);
+      setIsLoading(false);
+    }, 800);
+  };
 
   const openModal = (project: Project) => {
     setSelectedProject(project);
@@ -95,7 +132,7 @@ export default function CodePortfolio() {
 
   const closeModal = () => {
     setIsModalOpen(false);
-    document.body.style.overflow = "auto"; // Re-enable scrolling
+    document.body.style.overflow = "auto";
   };
 
   return (
@@ -113,7 +150,7 @@ export default function CodePortfolio() {
 
         {/* Projects Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {projects.map((project) => (
+          {projects.slice(0, visibleProjects).map((project) => (
             <div
               key={project.id}
               className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer"
@@ -140,6 +177,39 @@ export default function CodePortfolio() {
           ))}
         </div>
 
+        {/* Show More Button */}
+        {visibleProjects < projects.length && (
+          <div className="text-center mb-16">
+            <button
+              onClick={loadMoreProjects}
+              disabled={isLoading}
+              className="inline-flex items-center justify-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg shadow-md transition-all duration-300 transform hover:-translate-y-1 disabled:opacity-50 disabled:cursor-not-allowed"
+            >
+              {isLoading ? (
+                "Loading..."
+              ) : (
+                <>
+                  Show More Projects
+                  <svg
+                    className="w-4 h-4 ml-2"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M19 9l-7 7-7-7"
+                    />
+                  </svg>
+                </>
+              )}
+            </button>
+          </div>
+        )}
+
         {/* CTA Button */}
         <div className="text-center">
           <Link
@@ -150,7 +220,7 @@ export default function CodePortfolio() {
           </Link>
         </div>
 
-        {/* Project Story Modal */}
+        {/* Modal */}
         {isModalOpen && selectedProject && (
           <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
             <div className="bg-white rounded-xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">

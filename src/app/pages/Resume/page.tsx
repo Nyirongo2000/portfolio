@@ -3,14 +3,20 @@ import Link from "next/link";
 export default function Resume() {
   return (
     <main className="min-h-screen bg-white text-black p-8 flex flex-col items-center md:items-start">
+      {/* Header Section */}
       <section className="text-center md:text-left mb-16 w-full max-w-screen-lg">
         <h1 className="text-5xl font-extrabold tracking-wide mt-14 mb-4">
-          Oliver Stevin Nyirongo
+          CURRICULUM VITAE
         </h1>
+
+        <h2 className="text-4xl font-bold tracking-wide mb-4">
+          Oliver Stevin Nyirongo
+        </h2>
 
         <p className="text-lg text-gray-600">
           Software Engineer & Creative Designer
         </p>
+
         <div className="mt-6 space-y-2">
           <p className="text-lg text-gray-600">Phone: +265882748301</p>
           <p className="text-lg text-gray-600">
@@ -26,8 +32,20 @@ export default function Resume() {
               github.com/Nyirongo2000
             </Link>
           </p>
+          <p className="text-lg text-gray-600">
+            Portfolio:{" "}
+            <Link
+              href="https://olivernyirongo.online"
+              target="_blank"
+              className="text-blue-600 hover:text-blue-800"
+            >
+              olivernyirongo.online
+            </Link>
+          </p>
         </div>
       </section>
+
+      {/* Download CV Button */}
       <a
         download
         href="/public/resources/Oliver_Nyirongo_CV_Feb2025.pdf"
@@ -36,8 +54,9 @@ export default function Resume() {
         Download CV
       </a>
 
-      <hr className="border-t-2 border-gray-300 mx-2 md:mx-0 w-full max-w-screen-lg my-8" />
+      <hr className="border-t-2 border-gray-300 w-full max-w-screen-lg my-8" />
 
+      {/* Professional Summary */}
       <section className="mb-16 w-full max-w-screen-lg">
         <h2 className="text-3xl font-semibold text-gray-800 mb-4 text-center md:text-left">
           Professional Summary
@@ -53,8 +72,9 @@ export default function Resume() {
         </p>
       </section>
 
-      <hr className="border-t-2 border-gray-300 mx-2 md:mx-0 w-full max-w-screen-lg my-8" />
+      <hr className="border-t-2 border-gray-300 w-full max-w-screen-lg my-8" />
 
+      {/* Academic Background */}
       <section className="mb-16 w-full max-w-screen-lg">
         <h2 className="text-3xl font-semibold text-gray-800 mb-4 text-center md:text-left">
           Academic Background
@@ -67,72 +87,75 @@ export default function Resume() {
             <br />
             Bachelor of Science in Computer Science
           </li>
-          {/* <li>
+          <li>
             <strong>
               National College of Information Technology - NACIT (2019)
             </strong>
             <br />
             NCC Education Level 4 Diploma
-          </li> */}
-        </ul>
-      </section>
-
-      <hr className="border-t-2 border-gray-300 mx-2 md:mx-0 w-full max-w-screen-lg my-8" />
-
-      <section className="mb-16 w-full max-w-screen-lg">
-        <h2 className="text-3xl font-semibold text-gray-800 mb-4 text-center md:text-left">
-          Professional Qualifications
-        </h2>
-        <ul className="text-gray-700 leading-relaxed space-y-4 text-center md:text-left">
-          <li>
-            <strong>
-              Certificate for ALX AiCE - AI Career Essentials - 17th May 2024
-            </strong>
-          </li>
-          <li>
-            <strong>
-              Project DPro: Project Management for Development Professionals -
-              10 March 2024
-            </strong>
           </li>
         </ul>
       </section>
 
-      <hr className="border-t-2 border-gray-300 mx-2 md:mx-0 w-full max-w-screen-lg my-8" />
+      <hr className="border-t-2 border-gray-300 w-full max-w-screen-lg my-8" />
 
+      {/* Professional Qualification */}
       <section className="mb-16 w-full max-w-screen-lg">
         <h2 className="text-3xl font-semibold text-gray-800 mb-4 text-center md:text-left">
-          Experience/Projects
+          Professional Qualification
         </h2>
         <ul className="text-gray-700 leading-relaxed space-y-4 text-center md:text-left">
           <li>
-            Navigation System For The Visually Impaired: (Final year project
-            work)
+            Certificate for ALX AiCE - AI Career Essentials - 17th May 2024
+          </li>
+          <li>
+            Project DPro: Project Management for Development Professionals - 10
+            March 2024
+          </li>
+        </ul>
+      </section>
+
+      <hr className="border-t-2 border-gray-300 w-full max-w-screen-lg my-8" />
+
+      {/* Experience / Projects */}
+      <section className="mb-16 w-full max-w-screen-lg">
+        <h2 className="text-3xl font-semibold text-gray-800 mb-4 text-center md:text-left">
+          Experience / Projects
+        </h2>
+        <ul className="text-gray-700 leading-relaxed list-disc list-inside space-y-4 text-left">
+          <li>Bintel Analytics Limited - Software Developer (1 year)</li>
+          <li>
+            Social Media Conversation Bots (API in Java for open-source project)
+          </li>
+          <li>
+            Navigation System for the Visually Impaired (Mobile Application)
           </li>
           <li>
             Next-Gen Hackathon: Payslip Automation with Blockchain Technology
           </li>
-          <li>UNIMA Off-Campus Accommodation Finder - Web App</li>
+          <li>Accommodation Finder - Web App</li>
           <li>Social Chatting App</li>
-          <li>Habit Tracker App</li>
+          <li>Ticketing System Backend with Python Django</li>
         </ul>
       </section>
 
-      <hr className="border-t-2 border-gray-300 mx-2 md:mx-0 w-full max-w-screen-lg my-8" />
+      <hr className="border-t-2 border-gray-300 w-full max-w-screen-lg my-8" />
 
-      <section className="w-full max-w-screen-lg">
+      {/* Skills Section */}
+      <section className="w-full max-w-screen-lg mb-16">
         <h2 className="text-3xl font-semibold text-gray-800 mb-4 text-center md:text-left">
           Skills
         </h2>
+
         <div className="flex flex-col items-center space-y-8 md:items-start">
           <div className="w-full max-w-screen-md">
             <h3 className="text-2xl font-semibold text-gray-800 mb-2">
               Technical Skills:
             </h3>
             <ul className="text-gray-700 leading-relaxed list-disc list-inside">
-              <li>Mobile App Development (Flutter)</li>
+              <li>Mobile App Development (Flutter, React Native)</li>
               <li>Web App Development (React, Next.js)</li>
-              <li>Back-End Development (Java)</li>
+              <li>Back-End Development (Spring Boot, Django)</li>
               <li>Database: Postgres, MySQL</li>
               <li>Blockchain (Solidity)</li>
               <li>
@@ -143,8 +166,11 @@ export default function Resume() {
                 Project Management: Project planning and execution, team
                 coordination
               </li>
+              <li>Data Collection & DHIS2 Integration</li>
+              <li>Django (Advanced Experience)</li>
             </ul>
           </div>
+
           <div className="w-full max-w-screen-md">
             <h3 className="text-2xl font-semibold text-gray-800 mb-2">
               Other Skills:
@@ -161,19 +187,20 @@ export default function Resume() {
         </div>
       </section>
 
-      <hr className="border-t-2 border-gray-300 mx-2 md:mx-0 w-full max-w-screen-lg my-8" />
+      <hr className="border-t-2 border-gray-300 w-full max-w-screen-lg my-8" />
 
-      <section className="w-full max-w-screen-lg">
+      {/* Referees Section */}
+      <section className="w-full max-w-screen-lg mb-16">
         <h2 className="text-3xl font-semibold text-gray-800 mb-4 text-center md:text-left">
           Traceable Referees
         </h2>
-        <div className="space-y-6">
+
+        <div className="space-y-6 text-gray-700">
           <div>
             <strong>Dr. Kondwani Munthali</strong>
             <br />
             Head of Computing Department, University of Malawi
             <br />
-            <span>Email:</span>{" "}
             <a
               href="mailto:kmunthali@unima.ac.mw"
               className="text-blue-600 hover:text-blue-800"
@@ -181,6 +208,7 @@ export default function Resume() {
               kmunthali@unima.ac.mw
             </a>
           </div>
+
           <div>
             <strong>Jemimah N Kaonga</strong>
             <br />
@@ -188,14 +216,14 @@ export default function Resume() {
             <br />
             Phone: +265 888 042 798
             <br />
-            <span>Email:</span>{" "}
             <a
-              href="mailto:kaongajemimah@gmail.com"
+              href="mailto:jemimahkaonga22@gmail.com"
               className="text-blue-600 hover:text-blue-800"
             >
               jemimahkaonga22@gmail.com
             </a>
           </div>
+
           <div>
             <strong>Fatsani Byson</strong>
             <br />

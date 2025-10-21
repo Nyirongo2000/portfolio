@@ -17,22 +17,22 @@ export default function Landing() {
           <p className="text-xl sm:text-2xl mt-4 text-slate-700">
             Explore My Creative & Technical Masterpieces
           </p>
-          <p className="text-blue-600 text-sm sm:text-base mt-2">
+          {/* <p className="text-blue-600 text-sm sm:text-base mt-2">
             Site Under Construction: We Are Building in Real-Time
-          </p>
+          </p> */}
         </div>
 
         {/* Rest of the code remains exactly the same */}
         <div className="flex flex-col md:flex-row mt-4 space-y-4 md:space-y-0 md:space-x-4">
           <Link
             href="/pages/CodePortfolio"
-            className="flex items-center gap-5 justify-center md:justify-start rounded-lg bg-slate-600 px-3 py-3 text-sm sm:text-base font-medium text-white transition-colors hover:bg-slate-700 md:text-base"
+            className="flex items-center gap-5 justify-center md:justify-start rounded-lg bg-gray-700 px-3 py-3 text-sm sm:text-base font-medium text-white transition-colors hover:bg-slate-700 md:text-base"
           >
             <span>Code Portfolio</span>
           </Link>
           <Link
             href="/pages/DesignPortfolio"
-            className="flex items-center gap-7 justify-center md:justify-start rounded-lg bg-slate-600 px-4 py-3 text-sm sm:text-base font-medium text-white transition-colors hover:bg-slate-700 md:text-base"
+            className="flex items-center gap-7 justify-center md:justify-start rounded-lg bg-gray-700 px-4 py-3 text-sm sm:text-base font-medium text-white transition-colors hover:bg-slate-700 md:text-base"
           >
             <span>Design Portfolio</span>
           </Link>

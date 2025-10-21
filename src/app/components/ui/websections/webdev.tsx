@@ -5,11 +5,11 @@ import { FiExternalLink } from "react-icons/fi";
 export default function Webdev() {
   const projects = [
     {
-      title: "Hostel Booking System",
-      description: "Full-stack accommodation management platform",
-      image: "/resources/web3.png",
-      link: "https://chikanda-landlord.vercel.app/",
-      // tags: ["React", "Node.js", "MongoDB"],
+      title: "Payslip Automation",
+      description: "Blockchain-based payroll solution",
+      image: "/resources/payslip2.jpg",
+      link: "#",
+      // tags: ["Blockchain", "Solidity", "React"],
     },
     {
       title: "Abundant Life Center",
@@ -19,12 +19,13 @@ export default function Webdev() {
       // tags: ["Next.js", "Tailwind CSS", "Payment Integration"],
     },
     {
-      title: "Payslip Automation",
-      description: "Blockchain-based payroll solution",
-      image: "/resources/payslip2.jpg",
-      link: "#",
-      // tags: ["Blockchain", "Solidity", "React"],
-    },
+      title: "Bus booking system",
+      description:
+        "fullstack project where users can but and book bus tickets of any bus in malawi, built with Next.js, pringboot, postgres DB and payment intergrated with paychangu to have a smoothe flow",
+      image: "/resources/busticket.png",
+      link: "https://bus-yanga.vercel.app/",
+      // tags: ["React", "Node.js", "MongoDB"],
+    }
   ];
 
   return (
