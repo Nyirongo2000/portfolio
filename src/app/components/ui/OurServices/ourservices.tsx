@@ -69,11 +69,11 @@ export default function OurServices() {
               {/* Stats - Moved to align with cards */}
               <div className="flex gap-4 mb-8">
                 <div className="bg-slate-50 p-4 rounded-xl flex-1">
-                  <div className="text-2xl font-bold text-blue-600">100+</div>
+                  <div className="text-2xl font-bold text-blue-600">30+</div>
                   <div className="text-sm text-slate-600">Projects</div>
                 </div>
                 <div className="bg-slate-50 p-4 rounded-xl flex-1">
-                  <div className="text-2xl font-bold text-blue-600">4.9/5</div>
+                  <div className="text-2xl font-bold text-blue-600">4/5</div>
                   <div className="text-sm text-slate-600">Satisfaction</div>
                 </div>
               </div>

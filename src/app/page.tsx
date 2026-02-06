@@ -9,16 +9,18 @@ import Contactus from "./components/ui/websections/contactus";
 export default function Home() {
   return (
     <>
-       <Landing />
+      <Landing />
+      <hr />
       <OurServices />
+      <hr />
       <Webdev />
-      <hr className="m-10" />
+      <hr />
       <Appdev />
-      <hr className="m-10" />
+      <hr />
       <Design />
-      <hr className="m-10" />
+      <hr />
       <Contactus />
-      <hr className="m-10" />
+      <hr />
     </>
   );
 }

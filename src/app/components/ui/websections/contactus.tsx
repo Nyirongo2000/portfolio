@@ -2,208 +2,290 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import { FaWhatsapp } from "react-icons/fa";
+import { FaWhatsapp, FaCheckCircle } from "react-icons/fa";
 
-// Component for Contact Form
 export default function Contactus() {
   // State variables for form inputs
   const [firstName, setFirstName] = useState("");
   const [surName, setSurName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
-  const [submitted, setSubmitted] = useState(false);
-  const [showModal, setShowModal] = useState(false); // New state for modal visibility
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [showModal, setShowModal] = useState(false);
 
   // Handle form submission
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault(); // Prevent default form behavior
-    console.log("Sending");
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
 
     // Prepare data
-    let data = {
+    const data = {
       firstName,
       surName,
       email,
       message,
     };
 
-    // POST request to API
-    fetch("/api/contact", {
-      method: "POST",
-      headers: {
-        Accept: "application/json, text/plain, */*",
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(data),
-    })
-      .then((res) => {
-        console.log("Response received");
-        if (res.status === 200) {
-          console.log("Response succeeded!");
-          setSubmitted(true);
-
-          // Clear the form fields
-          setFirstName("");
-          setSurName("");
-          setEmail("");
-          setMessage("");
-
-          // Show success modal
-          setShowModal(true);
-        }
-      })
-      .catch((err) => {
-        console.log("Error occurred:", err);
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
       });
+
+      if (res.ok) {
+        // Clear form
+        setFirstName("");
+        setSurName("");
+        setEmail("");
+        setMessage("");
+
+        // Show success modal
+        setShowModal(true);
+      }
+    } catch (err) {
+      console.error("Error submitting form:", err);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
-    <>
-      {/* Modal */}
+    <main className="bg-white py-12 md:py-20">
+      <div className="px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        {/* Header Section */}
+        <div className="text-center mb-12 md:mb-16">
+          <h6 className="text-sm md:text-base font-medium text-slate-500 uppercase tracking-wide mb-2">
+            Get in Touch
+          </h6>
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-slate-900 mb-4">
+            Let's Work on Your{" "}
+            <span className="text-blue-600">Dream Project</span>
+          </h1>
+          <p className="text-lg text-slate-600 max-w-3xl mx-auto">
+            Ready to bring your ideas to life? Let's create something amazing
+            together.
+          </p>
+        </div>
+
+        {/* Main Content */}
+        <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-start">
+          {/* Left Column - Contact Form */}
+          <div className="lg:w-1/2">
+            <div className="bg-white rounded-2xl border border-slate-200 p-6 md:p-8">
+              <h2 className="text-2xl font-bold text-slate-900 mb-6">
+                Send a Message
+              </h2>
+
+              <form onSubmit={handleSubmit} className="space-y-6">
+                {/* Name Fields */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div>
+                    <label
+                      htmlFor="firstName"
+                      className="block text-sm font-medium text-slate-700 mb-2"
+                    >
+                      First Name *
+                    </label>
+                    <input
+                      type="text"
+                      id="firstName"
+                      value={firstName}
+                      onChange={(e) => setFirstName(e.target.value)}
+                      required
+                      className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all"
+                      placeholder="John"
+                    />
+                  </div>
+                  <div>
+                    <label
+                      htmlFor="surName"
+                      className="block text-sm font-medium text-slate-700 mb-2"
+                    >
+                      Surname *
+                    </label>
+                    <input
+                      type="text"
+                      id="surName"
+                      value={surName}
+                      onChange={(e) => setSurName(e.target.value)}
+                      required
+                      className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all"
+                      placeholder="Doe"
+                    />
+                  </div>
+                </div>
+
+                {/* Email Field */}
+                <div>
+                  <label
+                    htmlFor="email"
+                    className="block text-sm font-medium text-slate-700 mb-2"
+                  >
+                    Email Address *
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    required
+                    className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all"
+                    placeholder="john@example.com"
+                  />
+                </div>
+
+                {/* Message Field */}
+                <div>
+                  <label
+                    htmlFor="message"
+                    className="block text-sm font-medium text-slate-700 mb-2"
+                  >
+                    Your Message *
+                  </label>
+                  <textarea
+                    id="message"
+                    value={message}
+                    onChange={(e) => setMessage(e.target.value)}
+                    required
+                    rows={5}
+                    className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all resize-none"
+                    placeholder="Tell me about your project..."
+                  />
+                </div>
+
+                {/* Submit Button */}
+                <button
+                  type="submit"
+                  disabled={isSubmitting}
+                  className="w-full py-3.5 bg-slate-900 hover:bg-slate-800 text-white font-medium rounded-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                >
+                  {isSubmitting ? "Sending..." : "Send Message"}
+                </button>
+              </form>
+
+              {/* Divider */}
+              <div className="flex items-center my-8">
+                <div className="flex-1 border-t border-slate-200"></div>
+                <span className="px-4 text-sm text-slate-500">OR</span>
+                <div className="flex-1 border-t border-slate-200"></div>
+              </div>
+
+              {/* WhatsApp Button */}
+              <Link
+                href="https://wa.me/265882748301?text=Hello, I'm interested in working with you on a project"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center gap-3 w-full py-3.5 bg-green-600 hover:bg-green-700 text-white font-medium rounded-lg transition-colors"
+              >
+                <FaWhatsapp className="w-5 h-5" />
+                Message on WhatsApp
+              </Link>
+
+              {/* Email Alternative */}
+              <div className="mt-4 text-center">
+                <p className="text-sm text-slate-600">
+                  Prefer email? Send to{" "}
+                  <a
+                    href="mailto:olivernyirongo@gmail.com"
+                    className="text-blue-600 hover:text-blue-800 font-medium"
+                  >
+                    olivernyirongo@gmail.com
+                  </a>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Right Column - Image & Info */}
+          <div className="lg:w-1/2">
+            {/* Image Container - Adjusted for better fit */}
+            <div className="relative aspect-[4/3] md:aspect-[3/2] lg:aspect-[4/3] rounded-2xl overflow-hidden mb-8 bg-slate-100">
+              <Image
+                src="/resources/happy1.png"
+                alt="Happy collaboration"
+                fill
+                className="object-contain p-4"
+                priority
+                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+              />
+            </div>
+
+            {/* Contact Info */}
+            <div className="bg-slate-50 rounded-2xl p-6 md:p-8">
+              <h3 className="text-xl font-bold text-slate-900 mb-4">
+                Why Work With Me?
+              </h3>
+              <ul className="space-y-4">
+                <li className="flex items-start gap-3">
+                  <div className="w-6 h-6 rounded-full bg-blue-100 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <div className="w-2 h-2 rounded-full bg-blue-600"></div>
+                  </div>
+                  <span className="text-slate-700">
+                    <strong>Full-Stack Expertise:</strong> From design to
+                    development
+                  </span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <div className="w-6 h-6 rounded-full bg-blue-100 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <div className="w-2 h-2 rounded-full bg-blue-600"></div>
+                  </div>
+                  <span className="text-slate-700">
+                    <strong>Fast Response:</strong> Typically reply within a few
+                    hours
+                  </span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <div className="w-6 h-6 rounded-full bg-blue-100 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <div className="w-2 h-2 rounded-full bg-blue-600"></div>
+                  </div>
+                  <span className="text-slate-700">
+                    <strong>Clear Communication:</strong> Regular updates and
+                    transparent process
+                  </span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <div className="w-6 h-6 rounded-full bg-blue-100 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <div className="w-2 h-2 rounded-full bg-blue-600"></div>
+                  </div>
+                  <span className="text-slate-700">
+                    <strong>Quality Guarantee:</strong> Professional results
+                    you'll love
+                  </span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Success Modal */}
       {showModal && (
-        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
-          <div className="bg-white p-6 rounded-lg shadow-lg">
-            <h2 className="text-lg font-bold">Message Sent!</h2>
-            <p>
-              Your message has been sent successfully. We will get back to you
-              soon.
-            </p>
-            <button
-              className="mt-4 bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700"
-              onClick={() => setShowModal(false)}
-            >
-              Close
-            </button>
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50">
+          <div className="bg-white rounded-2xl p-6 md:p-8 max-w-md w-full">
+            <div className="text-center">
+              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                <FaCheckCircle className="w-8 h-8 text-green-600" />
+              </div>
+              <h3 className="text-2xl font-bold text-slate-900 mb-4">
+                Message Sent!
+              </h3>
+              <p className="text-slate-600 mb-8">
+                Thank you for reaching out. I'll get back to you within 24
+                hours.
+              </p>
+              <button
+                onClick={() => setShowModal(false)}
+                className="w-full py-3 bg-slate-900 hover:bg-slate-800 text-white font-medium rounded-lg transition-colors"
+              >
+                Close
+              </button>
+            </div>
           </div>
         </div>
       )}
-
-      {/* Section Header */}
-      <div className="flex flex-col justify-start p-6">
-        <h6>Do you like what you see?</h6>
-        <h1 className="text-5xl">Let us Work on that Dream Project</h1>
-      </div>
-
-      <div className="flex flex-row justify-evenly">
-        {/* Contact Form */}
-        <div className="flex justify-center">
-          <form
-            onSubmit={handleSubmit}
-            className="p-6 w-full h-fit max-w-md bg-white shadow-lg rounded-md"
-          >
-            {/* First Name Field */}
-            <div className="mb-4">
-              <label
-                htmlFor="firstName"
-                className="block text-sm font-medium text-gray-700"
-              >
-                First Name
-              </label>
-              <input
-                onChange={(e) => setFirstName(e.target.value)}
-                value={firstName}
-                type="text"
-                id="firstName"
-                name="firstName"
-                className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-                required
-              />
-            </div>
-
-            {/* Surname Field */}
-            <div className="mb-4">
-              <label
-                htmlFor="surname"
-                className="block text-sm font-medium text-gray-700"
-              >
-                Surname
-              </label>
-              <input
-                onChange={(e) => setSurName(e.target.value)}
-                value={surName}
-                type="text"
-                id="surname"
-                name="surName"
-                className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-                required
-              />
-            </div>
-
-            {/* Email Field */}
-            <div className="mb-4">
-              <label
-                htmlFor="email"
-                className="block text-sm font-medium text-gray-700"
-              >
-                Email
-              </label>
-              <input
-                onChange={(e) => setEmail(e.target.value)}
-                value={email}
-                type="email"
-                id="email"
-                name="email"
-                className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-                required
-              />
-            </div>
-
-            {/* Message Field */}
-            <div className="mb-4">
-              <label
-                htmlFor="message"
-                className="block text-sm font-medium text-gray-700"
-              >
-                Message
-              </label>
-              <textarea
-                onChange={(e) => setMessage(e.target.value)}
-                value={message}
-                id="message"
-                name="message"
-                rows={4}
-                className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-                required
-              ></textarea>
-            </div>
-
-            {/* Submit Button */}
-            <div className="flex flex-col justify-center gap-4">
-              <button
-                type="submit"
-                className="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
-              >
-                Submit
-              </button>
-
-              <hr />
-              <p className="text-center"> or</p>
-
-              {/* WhatsApp Contact */}
-              <Link
-                href={"https://wa.me/265882748301?text=hello"}
-                className="bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2"
-              >
-                <div className="flex flex-row justify-between gap-1">
-                  <p>Get in Touch</p>
-                  <FaWhatsapp className="text-2xl text-white" />
-                </div>
-              </Link>
-            </div>
-          </form>
-        </div>
-
-        {/* Image */}
-        <div>
-          <Image
-            src="/resources/happy1.png"
-            alt="Description of image"
-            width={600}
-            height={400}
-            className="object-cover hidden md:block mt-4 ml-11"
-          />
-        </div>
-      </div>
-    </>
+    </main>
   );
 }

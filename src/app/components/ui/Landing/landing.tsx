@@ -9,7 +9,7 @@ export default function Landing() {
       <div className="flex flex-col w-full md:w-1/2 items-center md:items-start text-center md:text-left py-8 md:py-16 lg:py-24">
         <div className="w-full max-w-2xl">
           {/* Big header with highlighted words */}
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-tight font-medium">
+          <h1 className="text-3xl mt-6 sm:text-4xl md:text-5xl lg:text-6xl leading-tight font-medium">
             Where <span className="text-blue-600">Design</span> Meets{" "}
             <span className="text-orange-600">Development</span>
           </h1>
