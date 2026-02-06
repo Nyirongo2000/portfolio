@@ -61,12 +61,12 @@ export default function Contactus() {
             Get in Touch
           </h6>
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-slate-900 mb-4">
-            Let's Work on Your{" "}
+            Let&apos;s Work on Your{" "}
             <span className="text-blue-600">Dream Project</span>
           </h1>
           <p className="text-lg text-slate-600 max-w-3xl mx-auto">
-            Ready to bring your ideas to life? Let's create something amazing
-            together.
+            Ready to bring your ideas to life? Let&apos;s create something
+            amazing together.
           </p>
         </div>
 
@@ -252,7 +252,7 @@ export default function Contactus() {
                   </div>
                   <span className="text-slate-700">
                     <strong>Quality Guarantee:</strong> Professional results
-                    you'll love
+                    you&apos;ll love
                   </span>
                 </li>
               </ul>
@@ -273,7 +273,7 @@ export default function Contactus() {
                 Message Sent!
               </h3>
               <p className="text-slate-600 mb-8">
-                Thank you for reaching out. I'll get back to you within 24
+                Thank you for reaching out. I&apos;ll get back to you within 24
                 hours.
               </p>
               <button
