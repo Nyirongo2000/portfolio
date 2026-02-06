@@ -1,94 +1,124 @@
+"use client";
+
 import Image from "next/image";
-import Card from "../shared/card";
 import Link from "next/link";
+import { ArrowRightIcon } from "@heroicons/react/24/outline";
 
 export default function OurServices() {
-  return (
-    <main className="bg-slate-100">
-      {/* Section Header */}
-      <div className="flex flex-col justify-start mt-[-16rem] p-6">
-        <h6>Our Services</h6>
-        <h1 className="text-5xl">What Do I Do?</h1>
-      </div>
+  const services = [
+    {
+      title: "Website Development",
+      description: "Custom, responsive websites built with modern frameworks",
+      image: "/resources/web.jpg",
+      href: "/pages/CodePortfolio",
+    },
+    {
+      title: "Mobile App Development",
+      description: "Native & cross-platform apps for iOS and Android",
+      image: "/resources/mobile.jpg",
+      href: "/pages/CodePortfolio",
+    },
+    {
+      title: "API Development & Integration",
+      description: "Robust APIs and seamless third-party integrations",
+      image: "/resources/api.jpg",
+      href: "/pages/CodePortfolio",
+    },
+    {
+      title: "Creative Graphic Design",
+      description: "Stunning visuals that enhance user experience",
+      image: "/resources/design.jpg",
+      href: "/pages/DesignPortfolio",
+    },
+  ];
 
-      {/* Introduction and Cards Section */}
-      <div className="flex flex-col md:flex-row justify-between p-6 max-w-6xl mx-auto">
-        {/* Introduction and Image */}
-        <div className="flex-1 flex w-full md:w-[48%] flex-col mb-10 md:mb-0">
-          <p>
-            I create powerful websites, mobile apps, and software solutions that
-            run smoothly on any device. With secure payment integration, robust
-            APIs, and stunning graphic designs, I craft digital experiences
-            designed to grow your business and drive success.
-            <br />
+  return (
+    <main className="bg-white py-12 md:py-20">
+      <div className="px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        {/* Section Header */}
+        <div className="text-center mb-12 md:mb-16">
+          <h6 className="text-sm md:text-base font-medium text-slate-500 uppercase tracking-wide mb-2">
+            {/* Our Services */}
+          </h6>
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-slate-900 mb-4">
+            What Do I Do?
+          </h1>
+          <p className="text-lg text-slate-600 max-w-3xl mx-auto">
+            Crafting digital experiences that combine technology with design to
+            elevate your business.
           </p>
-          {/* <div>
-            <div className="flex flex-col md:flex-row mt-4 space-y-4 md:space-y-0 md:space-x-4">
-              <Link
-                href="/pages/CodePortfolio"
-                className="flex items-center gap-5 justify-center md:justify-start rounded-lg bg-slate-900 px-3 py-3 text-sm font-medium text-white transition-colors hover:bg-slate-700 md:text-base"
-              >
-                <span>Code Portfolio</span>
-              </Link>
-              <Link
-                href="/pages/DesignPortfolio"
-                className="flex items-center gap-7 justify-center md:justify-start rounded-lg bg-slate-900 px-4 py-3 text-sm font-medium text-white transition-colors hover:bg-slate-700 md:text-base"
-              >
-                <span>Design Portfolio</span>
-              </Link>
-            </div>
-          </div> */}
-          <div>
-            <Image
-              src="/resources/cyborg.png"
-              alt="Description of image"
-              width={400}
-              height={300}
-              className="object-cover hidden md:block mt-4"
-            />
-            <Image
-              src="/resources/cyborgm.png"
-              alt="Description of image"
-              width={400}
-              height={300}
-              className="object-cover block md:hidden mt-4"
-            />
-          </div>
         </div>
 
-        {/* Cards Section */}
-        <div className="flex-1 md:w-[48%] flex flex-col ">
-          <div className="flex justify-center">
-            <Card
-              href=""
-              imageSrc="/resources/web.jpg"
-              imageAlt="Tech Image 1"
-              description="Website development"
-              // disabled={true}
-            />
-            <Card
-              href=""
-              imageSrc="/resources/mobile.jpg"
-              imageAlt="Tech Image 2"
-              description="Mobile App dev"
-              // disabled={true}
-            />
+        {/* Main Content - Aligned Containers */}
+        <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-stretch">
+          {/* Left Column - Introduction & Full Height Image */}
+          <div className="lg:w-1/2">
+            <div className="bg-white rounded-2xl p-6 md:p-8 border border-slate-200 h-full flex flex-col">
+              <h2 className="text-2xl font-bold text-slate-900 mb-4">
+                Turning Vision Into Reality
+              </h2>
+
+              <p className="text-slate-700 leading-relaxed mb-8">
+                I create powerful websites, mobile apps, and software solutions
+                that run smoothly on any device. With secure payment
+                integration, robust APIs, and stunning graphic designs, I craft
+                digital experiences designed to grow your business and drive
+                success.
+              </p>
+
+              {/* Stats - Moved to align with cards */}
+              <div className="flex gap-4 mb-8">
+                <div className="bg-slate-50 p-4 rounded-xl flex-1">
+                  <div className="text-2xl font-bold text-blue-600">100+</div>
+                  <div className="text-sm text-slate-600">Projects</div>
+                </div>
+                <div className="bg-slate-50 p-4 rounded-xl flex-1">
+                  <div className="text-2xl font-bold text-blue-600">4.9/5</div>
+                  <div className="text-sm text-slate-600">Satisfaction</div>
+                </div>
+              </div>
+
+              {/* Full Height Image - Takes remaining space */}
+              <div className="relative flex-1 rounded-xl overflow-hidden mt-auto">
+                <Image
+                  src="/resources/cyborg.png"
+                  alt="Digital Solutions Illustration"
+                  fill
+                  className="object-cover"
+                  priority
+                />
+              </div>
+            </div>
           </div>
-          <div className="flex justify-center">
-            <Card
-              href=""
-              imageSrc="/resources/api.jpg"
-              imageAlt="Tech Image 3"
-              description="API dev & Integration"
-              // disabled={true}
-            />
-            <Card
-              href=""
-              imageSrc="/resources/design.jpg"
-              imageAlt="Tech Image 4"
-              description="Creative Graphic Design"
-              // disabled={true}
-            />
+
+          {/* Right Column - Services Cards */}
+          <div className="lg:w-1/2">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6 h-full">
+              {services.map((service, index) => (
+                <Link
+                  key={index}
+                  href={service.href}
+                  className="group block bg-white rounded-xl border border-slate-200 overflow-hidden hover:border-blue-300 hover:shadow-md transition-all h-full"
+                >
+                  <div className="relative h-48 md:h-56">
+                    <Image
+                      src={service.image}
+                      alt={service.title}
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                  </div>
+                  <div className="p-4 md:p-6">
+                    <h3 className="text-lg md:text-xl font-semibold text-slate-900 mb-2 group-hover:text-blue-600">
+                      {service.title}
+                    </h3>
+                    <p className="text-sm md:text-base text-slate-600">
+                      {service.description}
+                    </p>
+                  </div>
+                </Link>
+              ))}
+            </div>
           </div>
         </div>
       </div>

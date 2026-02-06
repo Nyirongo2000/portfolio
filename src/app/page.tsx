@@ -9,9 +9,7 @@ import Contactus from "./components/ui/websections/contactus";
 export default function Home() {
   return (
     <>
-      <div className="flex min-h-screen flex-col items-center mb-0 justify-between p-24">
-        <Landing />
-      </div>
+       <Landing />
       <OurServices />
       <Webdev />
       <hr className="m-10" />
