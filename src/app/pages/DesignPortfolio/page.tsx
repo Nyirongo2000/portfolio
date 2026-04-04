@@ -226,7 +226,7 @@ export default function DesignPortfolio() {
               >
                 <button
                   onClick={closeModal}
-                  className="absolute -top-2 right-0 md:-right-10 text-white hover:text-blue-400 transition-colors p-2"
+                  className="absolute -top-2 z-[110] right-0 md:-right-10  text-white hover:text-blue-400 transition-colors p-2"
                 >
                   <FiX className="w-8 h-8" />
                 </button>
