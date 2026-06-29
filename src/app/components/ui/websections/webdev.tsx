@@ -5,10 +5,10 @@ import { FiExternalLink } from "react-icons/fi";
 export default function Webdev() {
   const projects = [
     {
-      title: "HEFAI Organization",
-      description: "Modern website for SRHR advocacy organization",
-      image: "/resources/hefai.png",
-      link: "https://www.hefai.org/",
+      title: "Qwathu Group Limited",
+      description: "Modern website for a profesionla construction facilitation company",
+      image: "/resources/qwathu.png",
+      link: "https://www.qwathu.com/",
     },
     {
       title: "Abundant Life Center",
@@ -17,10 +17,10 @@ export default function Webdev() {
       link: "https://abundantlifecentermalawi.org/",
     },
     {
-      title: "Bus Booking System",
+      title: "Tropical Paints ",
       description:
-        "Full-stack platform for nationwide bus ticket booking with payment integration",
-      image: "/resources/busticket.png",
+        "Full website for tropical paints(OG paint ltd)",
+      image: "/resources/tropical.png",
       link: "https://bus-yanga.vercel.app/",
     },
   ];
