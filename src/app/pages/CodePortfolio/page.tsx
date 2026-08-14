@@ -18,6 +18,18 @@ interface Project {
 
 const PROJECTS: Project[] = [
   {
+  id: 13,
+  title: "Deo favante Lawyers Platform",
+  category: "Web",
+  description:
+    "A sleek, authoritative corporate digital platform engineered to project legal excellence, showcase practice areas, and streamline client consultations.",
+  imageUrl: "/resources/deofavente.png",
+  story:
+    "Commissioned by Deofavante Lawyers to elevate their firm’s digital presence, IDE Malawi engineered a modern, high-performance web application designed to command respect in the legal sector. Moving beyond conventional law firm websites, we crafted a sophisticated, high-contrast visual architecture that reflects trust, prestige, and institutional authority. The platform features structured directories detailing their core practice areas, team expertise, and client engagement paths. By focusing on pixel-perfect responsive layout design, rapid load speeds, and intuitive navigation flow, the platform seamlessly connects prospective corporate and private clients with premier legal services.",
+  technologies: ["Next.js"],
+  liveLink: "https://deofavantelawyers.com/",
+},
+  {
     id: 12,
     title: "Qwathu Group Ltd Website",
     category: "Web",
@@ -116,17 +128,17 @@ const PROJECTS: Project[] = [
       "Automated payslip generation that reduced processing time from 3 days to 15 minutes.",
     technologies: ["Python", "Django", "PostgreSQL"],
   },
-  {
-    id: 7,
-    title: "Rainbowpaint",
-    category: "Web",
-    description: "Company website",
-    imageUrl: "/resources/rainbowpaint.png",
-    story:
-      "Vibrant company website showcasing products and services with responsive design.",
-    technologies: ["Next.js", "Tailwind CSS"],
-    liveLink: "https://rainbowpaints.vercel.app/",
-  },
+  // {
+  //   id: 7,
+  //   title: "Rainbowpaint",
+  //   category: "Web",
+  //   description: "Company website",
+  //   imageUrl: "/resources/rainbowpaint.png",
+  //   story:
+  //     "Vibrant company website showcasing products and services with responsive design.",
+  //   technologies: ["Next.js", "Tailwind CSS"],
+  //   liveLink: "https://rainbowpaints.vercel.app/",
+  // },
   {
     id: 5,
     title: "Hostel Management",
@@ -193,14 +205,14 @@ export default function CodePortfolio() {
         <div className="absolute inset-0 bg-gradient-to-b from-blue-950 via-blue-900/80 to-[#CBDCEB] z-0 pointer-events-none" />
 
         <div className="relative z-10 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto text-center">
-          <motion.span
+          {/* <motion.span
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider bg-blue-400/20 text-blue-200 border border-blue-400/30 mb-4"
           >
             <span className="w-1.5 h-1.5 rounded-full bg-blue-300 animate-pulse" />
             Engineering Showcase
-          </motion.span>
+          </motion.span> */}
 
           <motion.h1
             initial={{ opacity: 0, y: 15 }}
