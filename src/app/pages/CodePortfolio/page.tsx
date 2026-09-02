@@ -27,7 +27,7 @@ const PROJECTS: Project[] = [
   story:
     "Commissioned by Deofavante Lawyers to elevate their firm’s digital presence, IDE Malawi engineered a modern, high-performance web application designed to command respect in the legal sector. Moving beyond conventional law firm websites, we crafted a sophisticated, high-contrast visual architecture that reflects trust, prestige, and institutional authority. The platform features structured directories detailing their core practice areas, team expertise, and client engagement paths. By focusing on pixel-perfect responsive layout design, rapid load speeds, and intuitive navigation flow, the platform seamlessly connects prospective corporate and private clients with premier legal services.",
   technologies: ["Next.js"],
-  liveLink: "https://deofavantelawyers.com/",
+  liveLink: "https://www.deofaventelawyers.com/",
 },
   {
     id: 12,
